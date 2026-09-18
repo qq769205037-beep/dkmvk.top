@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Google Ads 出站点击转化代码 (AW-18450562942) -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18450562942"></script>
   <script>
@@ -22,7 +23,7 @@
 
     gtag('config', 'AW-18450562942');
 
-    // 稳定防卡死、防重发、精准上报的出站点击转化函数
+    // 稳定防卡死、防连击、100% 记录单次转化的回传函数
     var isRedirecting = false;
     function gtag_report_conversion(url) {
       if (isRedirecting) return false;
@@ -47,7 +48,7 @@
         navigate();
       }
 
-      // 500ms 超时强制跳转兜底
+      // 500ms 超时强制跳转兜底，彻底杜绝卡顿
       setTimeout(navigate, 500);
       return false;
     }
@@ -185,7 +186,7 @@
       margin: 0 0 24px;
     }
 
-    /* 现代行动按钮 CTA */
+    /* 行动按钮 CTA */
     .btn-cta {
       display: flex;
       align-items: center;
@@ -211,7 +212,7 @@
       margin-top: 10px;
     }
 
-    /* 模拟金融行情看板终端微组件 */
+    /* 行情看板组件 */
     .market-terminal {
       background: var(--bg-surface);
       border: 1px solid var(--border-line);
@@ -247,7 +248,7 @@
     .ticker-val { font-size: 1.05rem; font-weight: 800; color: #fff; margin: 4px 0 2px; }
     .ticker-change { font-size: 0.76rem; color: #34d399; font-weight: 700; }
 
-    /* 模拟 WhatsApp 真实进群交流视窗 */
+    /* 真实进群交流场景 */
     .chat-simulator {
       background: var(--wa-chat-bg);
       border: 1px solid var(--border-line);
@@ -376,7 +377,7 @@
     .feature-item h3 { margin: 0 0 4px; font-size: 0.98rem; font-weight: 700; color: #fff; }
     .feature-item p { margin: 0; font-size: 0.84rem; color: var(--text-muted); line-height: 1.55; }
 
-    /* 常见疑问折叠 (FAQ) */
+    /* 常见问题 (FAQ) */
     .faq-wrapper { margin: 20px 0 24px; border-top: 1px solid var(--border-line); }
     details { border-bottom: 1px solid var(--border-line); }
     summary {
@@ -439,7 +440,7 @@
     }
     .footer-links button:hover { color: #fff; }
 
-    /* 手机端常驻底部转化条 */
+    /* 移动端常驻底部转化条 */
     .mobile-sticky-bar {
       position: fixed;
       z-index: 99;
